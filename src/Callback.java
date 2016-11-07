@@ -2,16 +2,17 @@
 public class Callback implements ICallback
 {
 
+	private boolean flag;
+	private boolean changePath;
+	
 	@Override
 	public boolean getFlag() {
-		// TODO Auto-generated method stub
-		return false;
+		return this.flag;
 	}
 
 	@Override
 	public boolean getPath() {
-		// TODO Auto-generated method stub
-		return false;
+		return this.changePath;
 	}
 
 	@Override
@@ -22,7 +23,7 @@ public class Callback implements ICallback
 
 	@Override
 	public void setPath(boolean path) {
-		// TODO Auto-generated method stub
+		this.changePath = path;
 		
 	}
 
