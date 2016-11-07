@@ -2,5 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/Adam/studia/VII semestr/programowanie pod kątem wielokrotnego użycia/ZPI2_zad2/lib/CallbackLib.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
