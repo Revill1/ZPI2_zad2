@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Callback implements ICallback
 {
@@ -17,7 +18,23 @@ public class Callback implements ICallback
 
 	@Override
 	public void setFlag(boolean flag) {
-		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		this.flag = flag;
+		
+		if(flag == false)
+		{
+			System.out.println("Czy chcesz podac nowa sciezke zapisu pliku y/n");
+			String thatIsAQuestion = input.next();
+			
+			if(thatIsAQuestion.toLowerCase().equals("y"))
+			{
+				this.changePath = true;
+			}
+			else
+			{
+				this.changePath = false;
+			}
+		}
 		
 	}
 
