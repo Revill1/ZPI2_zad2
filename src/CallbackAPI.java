@@ -1,11 +1,10 @@
-import java.io.File;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 public class CallbackAPI 
 {
 	private static void SaveToFile(String[] parameters, ICallback callback)
 	{
-		File file = new File(parameters[0]);
 		PrintWriter zapis = null;
 		try
 		{
@@ -22,5 +21,29 @@ public class CallbackAPI
 		System.out.println(parameters[1]);
 		
 		callback.setFlag(true);
+	}
+	
+	public static void RunCallback(ICallback callback)
+	{
+		String[] parameters = new String[3];
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Prosze podac nazwe pliku");
+		parameters[0] = input.next();
+		System.out.println("Prosze podac tresc 'poprawnego' ciagu znakow");
+		parameters[1] = input.next();
+		System.out.println("Prosze podac tresc 'niepoprawnego' ciagu znakow");
+		parameters[2] = input.next();
+		
+		SaveToFile(parameters, callback);
+		
+		if(callback.getPath())
+		{
+			System.out.println("Prosze podac inna nazwe pliku");
+			parameters[0] = input.next();
+			
+			SaveToFile(parameters, callback);
+		}
+		input.close();
 	}
 }

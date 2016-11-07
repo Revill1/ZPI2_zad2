@@ -18,6 +18,7 @@ public class Callback implements ICallback
 
 	@Override
 	public void setFlag(boolean flag) {
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		this.flag = flag;
 		
