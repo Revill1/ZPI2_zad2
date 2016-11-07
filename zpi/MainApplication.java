@@ -16,7 +16,7 @@ public class MainApplication {
 	}
 		Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
 	        public void run() {
-	            System.out.println("In shutdown hook");
+	        	API.RunCallback(new Callback());
 	        }
 	    }, "Shutdown-thread"));
 	}
